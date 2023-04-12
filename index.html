@@ -5,8 +5,242 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LDR Enterprises</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <header>
+        <input type="checkbox" name="" id="check">
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="assets/img/ldr-enterprises.png" alt="Logo da LDR Enterprises" width="120px"></a>
+
+            <form class="search_box" method="get" action="filter.php">
+                <input type="search" name="search" id="search" placeholder="Digite o que deseja...">
+                <button type="submit"><span class="fa fa-search"></span></button>
+            </form>
+
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Departamentos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+
+            <label for="check" class="bar">
+                <span class="fa fa-bars" id="bars"></span>
+                <span class="fa fa-times" id="times"></span>
+            </label>
+        </nav>
+    </header>
     
+    <section class="apresentation">
+        <div class="slogan">
+            <h1>A empresa que mais cresce</h1>
+            <h2>Liderando setores</h2>
+
+            <div class="midias-sociais">
+                <a href="#">
+                    <div class="redes" id="fb">
+                        <span><i class="fa-brands fa-facebook-f"></i></span>
+                        <h5>Facebook</h5>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="redes" id="ig">
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <h5>Instagram</h5>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="redes" id="tt">
+                        <span><i class="fa-brands fa-twitter"></i></span>
+                        <h5>Twitter</h5>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="redes" id="yt">
+                        <span><i class="fa-brands fa-youtube"></i></span>
+                        <h5>YouTube</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-title">
+                <h2>Sobre a LDR Enterprises</h2>
+            </div>
+            <div class="before">
+                <div class="about-text">
+                    <h1>A ORIGEM</h1>
+                    <p>A empresa foi fundada no ano de 2015, na cidade de Suzano, na região metropolitana de São Paulo. Após visualizar má gestão e declínio nos negócios da cidade, o empresário suzanense Geovani Nascimento junto do empresário paulistano Gustavo Ferreira, decidiram investir na fundação de uma holding para administrar negócios na cidade do Alto Tietê.</p>
+                    <p>Fundada a princípio no centro da cidade, alugando um salão na rua principal, foi-se construído escritórios e assim foi-se comprando pequenas empresas com potencial, para que se explorasse e atingisse aquilo que se foi proposto. Com isso, após o sucesso no crescimento nas empresas segmentadas que faziam parte da holding LDR Enterprises, decidimos por expandir para a capital paulista, afim de melhorar a qualidade de produtos e serviços oferecidos pelas grandes e médias empresas de São Paulo.</p>
+                </div>
+                <div class="about-img">
+                    <img src="imagens/primeira-empresa.jpg" alt="" width="600px">
+                </div>
+            </div>
+            <div class="after">
+                <div class="about-img">
+                    <img src="imagens/ldr-atual.jpg" alt="" width="600px">
+                </div>
+                <div class="about-text">
+                    <h1>ATUALMENTE</h1>
+                            <p>Hoje a LDR Enterprises possui sua prinipal instalação no bairro do Tatuapé, na cidade de São Paulo, mas ainda assim, mantendo sua sede em Suzano. Após 7 anos desde a fundação, houve um grande crescimento capacitando a empresa a fundar suas próprias subsidiárias, aumentando seu portfólio com empresas de variados segmentos, sempre buscando se diversificar no mercado, prezando sempre pela qualidade em seus produtos e serviços oferecidos.</p>
+                            <p>Após a expansão, a holding junto de seus fundadores e demais sócios, decidiram abrir o capital da empresa para novos investidores, para aqueles que desejam crescer com a gente. Seguimos com o propósito de sempre crescer e liderar os setores na qual trabalhamos, com seriedade e compromisso, para assim, melhorarmos as empresas locais, e consequentemente a qualidade dos produtos e serviços ofertados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="depts">
+        <div class="icons-dept">
+            <div class="dept-title">
+                <h2>Nossos Departamentos</h2>
+            </div>
+            <div class="icons">
+                <div class="enterprises">
+                    <i class="fa-solid fa-desktop"></i>
+                    <h5>Tecnologia</h5>
+                </div>
+                <div class="enterprises">
+                    <i class="fa-solid fa-film"></i>
+                    <h5>Entretenimento</h5>
+                </div>
+                <div class="enterprises">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <h5>Finanças</h5>
+                </div>
+                <div class="enterprises">
+                    <i class="fa-solid fa-store"></i>
+                    <h5>Supermercado</h5>
+                </div>
+                <div class="enterprises">
+                    <i class="fa-solid fa-shirt"></i>
+                    <h5>Vestuário</h5>
+                </div>
+                <div class="enterprises">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h5>Logística</h5>
+                </div>
+                <div class="enterprises">
+                    <i class="fa-solid fa-pizza-slice"></i>
+                    <h5>Alimentação</h5>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-depts">
+            <div class="carousel">
+                <div class="carousel__nav">
+                 <span id="moveLeft" class="carousel__arrow">
+                      <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+              </svg>
+                  </span>
+                  <span id="moveRight" class="carousel__arrow" >
+                    <svg class="carousel__icon"  width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+              </svg>    
+                  </span>
+                </div>
+                <div class="carousel-item carousel-item--1">
+                  <div class="carousel-item__image"></div>
+                  <div class="carousel-item__info">
+                    <div class="carousel-item__container">
+                    <h1 class="carousel-item__title">LDR Technology</h1>
+                    <p class="carousel-item__description">Uma empresa criada em 2022, voltada para inovações tecnológicas. Fundada em Itaquera, São Paulo, é uma empresa focada desde em automatizações, à desenvolvimento de softwares.</p>
+                    <a href="#" class="carousel-item__btn">Conheça nossos serviços</a>
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item carousel-item--2">
+                  <div class="carousel-item__image"></div>
+                  <div class="carousel-item__info">
+                    <div class="carousel-item__container">
+                    <h1 class="carousel-item__title">Blaze Pizza</h1>
+                    <p class="carousel-item__description">Uma rede de pizzaria, fundada em Mogi das Cruzes, e adquirida pela LDR Enterprises em 2022. Se destacando pelo rápido preparo, diversidade de sabores e sua excelente qualidade.</p>
+                    <a href="#" class="carousel-item__btn">Conheça a melhor pizzaria de SP</a>
+                      </div>
+                  </div>
+                </div>
+                  <div class="carousel-item carousel-item--3">
+                  <div class="carousel-item__image"></div>
+                  <div class="carousel-item__info">
+                    <div class="carousel-item__container">
+                    <h1 class="carousel-item__title">Lykos</h1>
+                    <p class="carousel-item__description">Empresa fundada por jovens estudantes no ano de 2021, adquirida pela LDR Enterprises. Uma jovem e muito promissora marca de roupas, em constante crescimento, que atende a todos os estilos de roupa dos dias atuais.</p>
+                    <a href="#" class="carousel-item__btn">A marca da inovação</a>
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item carousel-item--4">
+                    <div class="carousel-item__image"></div>
+                    <div class="carousel-item__info">
+                      <div class="carousel-item__container">
+                      <h1 class="carousel-item__title">LDR Supermaket</h1>
+                      <p class="carousel-item__description">Foi criada em 2019, em Poá. Uma rede de supermercados inicialmente focada na região do Alto Tietê. Com sua expansão, foi conseguido atrair clientes em toda São Paulo, com seus preços abaixo da média, e ótimas localidades.</p>
+                      <a href="#" class="carousel-item__btn">A maior rede de supermercados</a>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-item--5">
+                    <div class="carousel-item__image"></div>
+                    <div class="carousel-item__info">
+                      <div class="carousel-item__container">
+                      <h1 class="carousel-item__title">LDR Bank</h1>
+                      <p class="carousel-item__description">Aquisição mais recente da LDR Enterprises, através da compra e fusão de dois bancos nacionais. Sendo o digital Agibank e o banco físico Banco Garantia. Com eles, houve a fusão, buscando liderar o mercado sempre inovando.</p>
+                      <a href="#" class="carousel-item__btn">As menores taxas</a>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-item--6">
+                    <div class="carousel-item__image"></div>
+                    <div class="carousel-item__info">
+                      <div class="carousel-item__container">
+                      <h1 class="carousel-item__title">LDR Studios</h1>
+                      <p class="carousel-item__description">Fundada no Tatuapé, São Paulo, a LDR Studios é uma empresa voltada para o ramo da TV e da cinematografia. Partindo da criação de animações, anúncios à produções de longa-metragem.</p>
+                      <a href="#" class="carousel-item__btn">Inovando o cinema nacional</a>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-item--7">
+                    <div class="carousel-item__image"></div>
+                    <div class="carousel-item__info">
+                      <div class="carousel-item__container">
+                      <h1 class="carousel-item__title">Transfly</h1>
+                      <p class="carousel-item__description">Uma empresa voltada a logística, sendo uma transportadora que está em relevância no mercado após 6 meses de sua fundação. Atendendo aos prazos de maneira eficiente, sempre garantindo a qualidade de seus transportados.</p>
+                      <a href="#" class="carousel-item__btn">Suas entregas voando</a>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h1>FALE CONOSCO</h1>
+        <p>Se possui dúvidas referentes aos nossos serviços, sugestões, críticas, nos envie uma mensagem!</p>
+        <div class="form" id="formContact">
+            <form action="index.html">
+                <input type="text" name="name" id="idName" placeholder="Nome:" required>
+                <input type="email" name="email" id="idEmail" placeholder="E-mail:" required>
+                <input type="text" name="assunt" id="idAssunt" placeholder="Assunto:" required>
+                <textarea name="message" id="idMessage" cols="30" rows="10" placeholder="Sua mensagem:" required></textarea>
+                <p><input type="submit" value="Enviar" id="submit"></p>
+                <p id="message"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/form.js"></script>
 </body>
 </html>
