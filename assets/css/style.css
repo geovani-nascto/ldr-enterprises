@@ -104,10 +104,6 @@
   background-color: #c4302b;
 }
 
-.about {
-  height: 150vh;
-}
-
 .about .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,5 +115,6 @@
   max-width: 960px;
   background-color: #34363f;
   margin: 0 auto;
+  height: 150vh;
 }
 /*# sourceMappingURL=style.css.map */

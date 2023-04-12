@@ -91,7 +91,6 @@ $color-details: #03f484;
 }
 
 .about{
-    height: 150vh;
 
     .container{
         display: flex;
@@ -99,5 +98,6 @@ $color-details: #03f484;
         max-width: 960px;
         background-color: $terciary-color;
         margin: 0 auto;
+        height: 150vh;
     }
 }
