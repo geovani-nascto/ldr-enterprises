@@ -26,6 +26,13 @@ $color-details: #03f484;
 
 }
 
+@mixin container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
 .apresentation{
     height: calc(100vh - 86px);
     background: linear-gradient(#34363fce, #34363fcb), url(../img/samsung1.jpg) no-repeat center/100%;
@@ -93,11 +100,411 @@ $color-details: #03f484;
 .about{
 
     .container{
-        display: flex;
-        flex-direction: column;
-        max-width: 960px;
-        background-color: $terciary-color;
-        margin: 0 auto;
-        height: 150vh;
+        @include container();
+        height: 120vh;
+
+
+        // .about-title{
+        //     height: 10vh;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: flex-end;
+
+        //     h2{
+        //         font-size: 3em;
+        //         text-transform: uppercase;
+        //         color: $terciary-color;
+        //     }
+        // }
+
+        .before, .after{
+            height: 60vh;
+            display: flex;
+
+            .about-text{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-right: 40px;
+
+                h1, p{
+                    color: $terciary-color;
+                }
+
+                h1{
+                    font-size: 1.6em;
+                }
+
+                p{
+                    font-size: 0.9em;
+                    text-align: justify;
+                    font-weight: 500;
+                }
+
+                .first-paragraph{
+                    margin: 20px 0;
+                }
+            }
+
+            .about-img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                padding-left: 40px;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .after{
+            border-top: 1px solid $terciary-color;
+            .about-text{
+                padding: 0 0 0 40px;
+            }
+
+            .about-img{
+                padding: 0 40px 0 0;
+            }
+        }
     }
+}
+
+.depts{
+
+    .icons-dept{
+        background-color: $secondary-color;
+
+        .container{
+            @include container();
+
+            .dept-title{
+                text-align: center;
+                height: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 30px;
+
+                h2{
+                    // font-size: 2em;
+                    font-size: 30px;
+                    text-transform: uppercase;
+                }
+            }
+
+            .icons{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .enterprises{
+                    width: 230px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 30px;
+
+                    i{
+                        font-size: 4em;
+                        margin-bottom: 5px;
+                    }
+
+                    h5{
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-depts{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0;
+        height: 80vh;
+
+        .carousel{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 1080px; //1100px
+            max-height: 500px; //650px
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+
+            .carousel__nav{
+                position: absolute;
+                right: 0;
+                z-index: 2;
+                bottom: 0;
+                border-radius: 10px;
+                background-color: #090a0f;
+
+
+                .carousel__arrow{
+                    cursor: pointer;
+                    display: inline-block;
+                    padding: 11px 15px;
+                    position: relative;
+                    background-color: $secondary-color;
+                    border-radius: 10px;
+
+
+                    .carousel__icon{
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 16px;
+                        fill: #fff;
+                    }
+                }
+                .carousel__arrow:nth-child(1)::after{
+                    content: '';
+                    right: -3px;
+                    position: absolute;
+                    width: 1px;
+                    background-color: #b0b0b0;
+                    height: 14px;
+                    top: 50%;
+                    margin-top: -7px;
+                }
+            }
+
+            .carousel-item{
+                visibility: visible;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: flex-end;
+                position: relative;
+                background-color: lightgray;
+                flex-shrink: 0;
+                position: absolute;
+                z-index: 0;
+                transition: 0.6s all linear;
+
+                .carousel-item__image{
+                    width: 60%;
+                    height: 100%;
+                    order: 2;
+                    align-self: flex-end;
+                    flex-basis: 60%;
+
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: relative;
+                    transform: translateX(100%);
+                    transition: 0.6s all ease-in-out;
+                }
+
+                .carousel-item__info{
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    background-color: $secondary-color;
+
+                    order: 1;
+                    left: 0;
+                    margin: auto;
+                    padding: 0 40px;
+                    width: 40%;
+
+                    .carousel-item__title{
+                        margin: 15px 0 0 0;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 44px;
+                        line-height: 45px;
+                        letter-spacing: 2px;
+                        font-weight: bold;
+                        color: #fff;
+                        transform: translateY(25%);
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.6s all ease-in-out;
+                    }
+
+                    .carousel-item__subtitle{
+                        font-family: Arial, Helvetica, sans-serif;
+                        letter-spacing: 2px;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        margin: 0;
+                        color: #7e7e7e;
+                        font-weight: bold;
+                        transform: translateY(25%);
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.4s all ease-in-out;
+                    }
+
+                    .carousel-item__description{
+                        transform: translateY(25%);
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.6s all ease-in-out;
+                        margin-top: 35px;
+                        font-family: 'Montserrat';
+                        font-weight: 500;
+                        font-size: 15px;
+                        color: #fff;
+                        line-height: 30px;
+                        margin-bottom: 35px;
+                    }
+
+                    .carousel-item__btn{
+                        width: 35%;
+                        color: #a3a2a2;
+                        font-family: Arial, Helvetica, sans-serif;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        margin: 0;
+                        width: 35%;
+                        font-weight: 700;
+                        text-decoration: none;
+                        transform: translateY(25%);
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.6s all ease-in-out;
+                    }
+                }
+            }
+
+            .carousel-item--1{
+                .carousel-item__image{
+                    background-image: url('../img/carousel-ldr-technology.jpg');
+                }
+            }
+
+            .carousel-item--2{
+                .carousel-item__image{
+                    background-image: url('../img/carousel-blaze-pizza.jpg');
+                 }
+            }
+
+            .carousel-item--3{
+                .carousel-item__image{
+                    background-image: url('../img/carousel-lykos.jpg');
+               }
+            }
+
+            .carousel-item--4{
+                .carousel-item__image{
+                    background-image: url('../img/carousel-ldr-supermarket.jpg');
+                 }
+            }
+
+            .carousel-item--5{
+                .carousel-item__image{
+                    background-image: url('../img/carousel-ldr-bank.jpg');
+               }
+            }
+
+            .carousel-item--6{
+                .carousel-item__image{
+                    background-image: url('../img/carousel-ldr-studios.jpg');
+               }
+            }
+
+            .carousel-item--7{
+                .carousel-item__image{
+                    background-image: url('../img/carousel-transfly.jpg');
+               }
+            }
+
+            .active{ //Dentro do carousel-item ou dps?
+                z-index: 1;
+                display: flex;
+                visibility: visible;
+
+                .carousel-item__info{
+                    .carousel-item__subtitle,
+                    .carousel-item__title,
+                    .carousel-item__description,
+                    .carousel-item__btn{
+                        transform: translateY(0);
+                        opacity: 1;
+                        transition: 0.6s all ease-in-out;
+                        visibility: visible;
+                    }
+                }
+
+                .carousel-item__image{
+                    transition: 0.6s all ease-in-out;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // height: 100vh;
+    background-color: #191d2b;
+    padding-bottom: 40px;
+
+    h1{
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    p{
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .form{
+
+        form{
+            display: flex;
+            flex-direction: column;
+            background-color: $terciary-color;
+            max-width: 800px;
+            padding: 30px;
+            border-radius: 10px;
+
+            input, textarea{
+                max-width: 600px;
+                padding: 10px 20px;
+                border-radius: 10px;
+                outline: 0;
+                border: 0;
+                margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 600;
+                color: $secondary-color;
+            }
+
+            p > input{
+                width: 100%;
+                padding: 20px;
+                background-color: $secondary-color;
+                cursor: pointer;
+                transition: 0.3s;
+                color: #fff;
+            }
+
+            p > input:hover{
+                filter: brightness(1.5);
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $terciary-color;
 }
