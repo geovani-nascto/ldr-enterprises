@@ -40,12 +40,12 @@ $color-details: #03f484;
     .slogan{
         display: flex;
         flex-direction: column;
-        background: rgba(255, 0, 0, 0.26);
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        max-width: 1080px;
 
         h1{
             font-size: 3em;
@@ -480,7 +480,7 @@ $color-details: #03f484;
             input, textarea{
                 max-width: 600px;
                 padding: 10px 20px;
-                border-radius: 10px;
+                border-radius: 5px;
                 outline: 0;
                 border: 0;
                 margin-bottom: 10px;
@@ -507,4 +507,82 @@ $color-details: #03f484;
 
 footer{
     background-color: $terciary-color;
+
+    .container{
+        @include container();
+
+        .footer-top{
+            border-bottom: 1px solid #fff;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .address, .midias, .newsletter{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 50px 50px 50px 0;
+
+                h3{
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                    font-size: 24px;
+                    font-weight: 800;
+                }
+            }
+
+            .address{
+                text-transform: uppercase;
+
+                address{
+                    font-weight: 500;
+                    font-style: normal;
+                }
+            }
+
+            .midias{
+
+                .icons-midias{
+                    i{
+                        font-size: 30px;
+                        margin-right: 20px;
+                        transition: 0.3s;
+                    }
+
+                    i:hover{
+                        color: #ccc;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            .newsletter{
+                padding-right: 0;
+
+                input{
+                    height: 50px;
+                    border: 0;
+                    outline: 0;
+                    border-radius: 10px;
+                    padding: 15px;
+                    font-size: 16px;
+                    color: $terciary-color;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .footer-bottom{
+            text-align: center;
+            margin-bottom: 20px;
+            
+            a{
+                transition: 0.3s;
+            }
+            a:hover{
+                color: #ccc;
+            }
+        }
+    }
 }
