@@ -22,9 +22,12 @@
   height: calc(100vh - 86px);
   background: -webkit-gradient(linear, left top, left bottom, from(#34363fce), to(#34363fcb)), url(../img/samsung1.jpg) no-repeat center/100%;
   background: linear-gradient(#34363fce, #34363fcb), url(../img/samsung1.jpg) no-repeat center/100%;
+  background-size: cover;
 }
 
 .apresentation .slogan {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,21 +35,21 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  max-width: 1080px;
 }
 
 .apresentation .slogan h1 {
-  font-size: 3em;
+  font-size: 4em;
 }
 
 .apresentation .slogan h2 {
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 300;
 }
 
@@ -58,6 +61,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .apresentation .slogan .midias-sociais .redes {
@@ -683,5 +688,61 @@ footer .container .footer-bottom a {
 
 footer .container .footer-bottom a:hover {
   color: #ccc;
+}
+
+@media screen and (max-width: 1080px) {
+  .about, footer {
+    padding: 0 20px;
+  }
+  .depts .carousel-depts {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .about .container {
+    height: auto;
+  }
+  .about .container .before, .about .container .after {
+    height: auto;
+    border: 0;
+  }
+  .about .container .before .about-text, .about .container .before .about-img, .about .container .after .about-text, .about .container .after .about-img {
+    width: 100%;
+    padding: 0;
+  }
+  .about .container .before .about-text, .about .container .after .about-text {
+    margin-bottom: 20px;
+  }
+  .about .container .before {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 40px 0;
+  }
+  .about .container .after {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-bottom: 40px;
+  }
+  .depts .carousel-depts .carousel .carousel-item .carousel-item__info .carousel-item__title {
+    margin: 0;
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .depts .carousel-depts .carousel .carousel-item .carousel-item__info .carousel-item__description {
+    line-height: 20px;
+    margin: 20px 0;
+  }
+  .depts .carousel-depts .carousel .carousel-item .carousel-item__info .carousel-item__btn {
+    font-size: 14px;
+  }
+  .contact {
+    padding: 0 20px 40px 20px;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

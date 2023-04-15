@@ -36,23 +36,27 @@ $color-details: #03f484;
 .apresentation{
     height: calc(100vh - 86px);
     background: linear-gradient(#34363fce, #34363fcb), url(../img/samsung1.jpg) no-repeat center/100%;
+    background-size: cover;
 
     .slogan{
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        justify-content: center;
+        align-items: center;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
         text-align: center;
-        max-width: 1080px;
 
         h1{
-            font-size: 3em;
+            font-size: 4em;
         }
 
         h2{
-            font-size: 2.5em;
+            font-size: 3em;
             font-weight: 300;
         }
 
@@ -60,6 +64,7 @@ $color-details: #03f484;
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
 
             .redes{
                 display: flex;
@@ -102,20 +107,6 @@ $color-details: #03f484;
     .container{
         @include container();
         height: 120vh;
-
-
-        // .about-title{
-        //     height: 10vh;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: flex-end;
-
-        //     h2{
-        //         font-size: 3em;
-        //         text-transform: uppercase;
-        //         color: $terciary-color;
-        //     }
-        // }
 
         .before, .after{
             height: 60vh;
@@ -586,3 +577,98 @@ footer{
         }
     }
 }
+
+@media screen and (max-width: 1080px){
+    .about, footer{
+        padding: 0 20px;
+    }
+
+    .depts{
+        .carousel-depts{
+            padding: 0 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 668px){
+    .about{
+        .container{
+            height: auto;
+
+            .before, .after{
+                height: auto;
+                border: 0;
+
+                .about-text, .about-img{
+                    width: 100%;
+                    padding: 0;
+                }
+
+                .about-text{
+                    margin-bottom: 20px;
+                }
+            }
+
+            .before{
+                flex-direction: column;
+                margin: 40px 0;
+            }
+
+            .after{
+                flex-direction: column-reverse;
+                margin-bottom: 40px;
+            }
+        }
+        
+    }
+
+    .depts .carousel-depts .carousel .carousel-item .carousel-item__info{
+        .carousel-item__title{
+            margin: 0;
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        .carousel-item__description{
+            line-height: 20px;
+            margin: 20px 0;
+        }
+
+        .carousel-item__btn{
+            font-size: 14px;
+        }
+    }
+
+    .contact{
+        padding: 0 20px 40px 20px;
+        text-align: center;
+    }
+}
+
+// @media screen and (min-width: 367px){
+//     .apresentation{
+//         height: 100vh;
+
+//         .slogan{
+
+//             h1{
+//                 font-size: 2.2em;
+//             }
+
+//             h2{
+//                 font-size: 1.5em;
+//             }
+
+//             .midias-sociais{
+//                 gap: 5px;
+//             }
+//         }
+//     }
+
+//     .about{
+
+//         .container{
+//             height: auto;
+//         }
+//     }
+// }
