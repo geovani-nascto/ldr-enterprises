@@ -512,7 +512,7 @@ footer{
                 flex: 1;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 padding: 50px 50px 50px 0;
 
                 h3{
@@ -590,7 +590,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 668px){
+@media screen and (max-width: 670px){
     .about{
         .container{
             height: auto;
@@ -622,26 +622,91 @@ footer{
         
     }
 
+    .depts .carousel-depts{
+        height: 60vh;
+        .carousel{
+            max-height: 400px;
+        }
+    }
+
+    .depts .carousel-depts .carousel .carousel-item{
+        background-size: cover;
+    }
     .depts .carousel-depts .carousel .carousel-item .carousel-item__info{
         .carousel-item__title{
             margin: 0;
-            font-size: 30px;
+            font-size: 26px;
             line-height: 35px;
         }
 
         .carousel-item__description{
-            line-height: 20px;
-            margin: 20px 0;
+            line-height: 18px;
+            margin: 10px 0;
         }
 
         .carousel-item__btn{
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 
     .contact{
         padding: 0 20px 40px 20px;
         text-align: center;
+    }
+
+    
+
+    footer .container .footer-top .midias{
+        .icons-midias{
+            display: flex;
+            flex-direction: column;
+            // flex-wrap: wrap;
+            // justify-content: space-between;
+
+            i{
+                // margin-right: 30px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    footer .container .footer-top .newsletter input{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px){
+
+    .depts .carousel-depts{
+        .carousel{
+            flex-direction: column;
+        }
+    }
+
+    footer .container .footer-top{
+        flex-direction: column;
+
+        .address, .midias, .newsletter{
+            padding: 15px 15px 15px 0;
+        }
+
+        .newsletter{
+            padding-right: 0;
+        }
+    }
+
+    footer .container .footer-top .midias{
+        .icons-midias{
+            display: flex;
+            flex-direction: row;
+            // flex-wrap: wrap;
+            // justify-content: space-between;
+
+            i{
+                // margin-right: 30px;
+                margin-bottom: 10px;
+            }
+        }
     }
 }
 
