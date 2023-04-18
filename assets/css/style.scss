@@ -677,10 +677,44 @@ footer{
 
 @media screen and (max-width: 420px){
 
-    .depts .carousel-depts{
-        .carousel{
-            flex-direction: column;
+    // .depts .carousel-depts{
+    //     .carousel{
+    //         flex-direction: column;
+
+    //         .carousel-item{
+    //             display: flex;
+    //             flex-direction: column;
+    //         }
+    //     }
+    // }
+
+    .depts{
+        .carousel-depts{
+            height: 60vh;
+    
+            .carousel{
+                max-height: 90%;
+                // flex-direction: column XXXXXX
+    
+                .carousel-item{
+                    flex-direction: column;
+        
+                    .carousel-item__image{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .carousel-item__info{
+                        height: 50%;
+                        width:100%;
+                    }
+                }        
+            }
         }
+    }
+
+    .contact .form form{
+        padding: 15px;
+        max-width: 320px;
     }
 
     footer .container .footer-top{
