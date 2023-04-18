@@ -669,15 +669,53 @@ footer .container .footer-top .newsletter {
   padding-right: 0;
 }
 
-footer .container .footer-top .newsletter input {
+footer .container .footer-top .newsletter .inputs-newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .container .footer-top .newsletter .inputs-newsletter input, footer .container .footer-top .newsletter .inputs-newsletter button {
   height: 50px;
   border: 0;
   outline: 0;
-  border-radius: 10px;
   padding: 15px;
   font-size: 16px;
+}
+
+footer .container .footer-top .newsletter .inputs-newsletter input[type=email] {
+  width: 75%;
+  border-radius: 10px 0 0 10px;
   color: #34363f;
   font-weight: 500;
+}
+
+footer .container .footer-top .newsletter .inputs-newsletter button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  border-radius: 0 10px 10px 0;
+  background-color: #1f315c;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer .container .footer-top .newsletter .inputs-newsletter button i {
+  display: none;
+}
+
+footer .container .footer-top .newsletter .inputs-newsletter button:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
 }
 
 footer .container .footer-bottom {
@@ -769,12 +807,30 @@ footer .container .footer-bottom a:hover {
   footer .container .footer-top .midias .icons-midias i {
     margin-bottom: 10px;
   }
-  footer .container .footer-top .newsletter input {
-    width: 100%;
+  footer .container .footer-top .newsletter .inputs-newsletter button i {
+    font-size: 20px;
+    display: block;
+  }
+  footer .container .footer-top .newsletter .inputs-newsletter button p {
+    display: none;
   }
 }
 
 @media screen and (max-width: 420px) {
+  .apresentation .slogan h1 {
+    font-size: 3em;
+  }
+  .apresentation .slogan h2 {
+    font-size: 2em;
+  }
+  .apresentation .slogan .midias-sociais {
+    gap: 10px;
+  }
+  .apresentation .slogan .midias-sociais .redes {
+    height: 40px;
+    width: 160px;
+    margin-top: 20px;
+  }
   .depts .carousel-depts {
     height: 70vh;
   }
@@ -822,6 +878,12 @@ footer .container .footer-bottom a:hover {
   }
   footer .container .footer-top .midias .icons-midias i {
     margin-bottom: 10px;
+  }
+  footer .container .footer-top .newsletter .inputs-newsletter button i {
+    display: none;
+  }
+  footer .container .footer-top .newsletter .inputs-newsletter button p {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

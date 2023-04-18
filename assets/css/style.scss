@@ -552,19 +552,47 @@ footer{
                 }
             }
 
+            
             .newsletter{
                 padding-right: 0;
 
-                input{
-                    height: 50px;
-                    border: 0;
-                    outline: 0;
-                    border-radius: 10px;
-                    padding: 15px;
-                    font-size: 16px;
-                    color: $terciary-color;
-                    font-weight: 500;
+                .inputs-newsletter{
+                    display: flex;
+
+                    input, button{
+                        height: 50px;
+                        border: 0;
+                        outline: 0;
+                        padding: 15px;
+                        font-size: 16px;
+                    }
+
+                    input[type=email]{
+                        width: 75%;
+                        border-radius: 10px 0 0 10px;
+                        color: $terciary-color;
+                        font-weight: 500;
+                    }
+                    button{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 25%;
+                        border-radius: 0 10px 10px 0;
+                        background-color: #1f315c;
+                        cursor: pointer;
+                        font-size: 14px;
+                        transition: 0.3s;
+
+                        i{
+                            display: none;
+                        }
+                    }
+                    button:hover{
+                        filter: brightness(1.2);
+                    }
                 }
+                
             }
         }
 
@@ -674,23 +702,42 @@ footer{
         }
     }
 
-    footer .container .footer-top .newsletter input{
-        width: 100%;
+    // footer .container .footer-top .newsletter input{
+    //     width: 100%;
+    // }
+
+    footer .container .footer-top .newsletter .inputs-newsletter button{
+        i{
+            font-size: 20px;
+            display: block;
+        }
+        p{
+            display: none;
+        }
     }
 }
 
 @media screen and (max-width: 420px){
 
-    // .depts .carousel-depts{
-    //     .carousel{
-    //         flex-direction: column;
+    .apresentation .slogan{
+        h1{
+            font-size: 3em;
+        }
 
-    //         .carousel-item{
-    //             display: flex;
-    //             flex-direction: column;
-    //         }
-    //     }
-    // }
+        h2{
+            font-size: 2em;
+        }
+
+        .midias-sociais{
+            gap: 10px;
+
+            .redes{
+                height: 40px;
+                width: 160px;
+                margin-top: 20px;
+            }
+        }
+    }
 
     .depts{
         .carousel-depts{
@@ -746,32 +793,14 @@ footer{
             }
         }
     }
+
+    footer .container .footer-top .newsletter .inputs-newsletter button{
+        i{
+            // font-size: 20px;
+            display: none;
+        }
+        p{
+            display: block;
+        }
+    }
 }
-
-// @media screen and (min-width: 367px){
-//     .apresentation{
-//         height: 100vh;
-
-//         .slogan{
-
-//             h1{
-//                 font-size: 2.2em;
-//             }
-
-//             h2{
-//                 font-size: 1.5em;
-//             }
-
-//             .midias-sociais{
-//                 gap: 5px;
-//             }
-//         }
-//     }
-
-//     .about{
-
-//         .container{
-//             height: auto;
-//         }
-//     }
-// }
