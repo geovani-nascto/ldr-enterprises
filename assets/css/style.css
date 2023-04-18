@@ -18,6 +18,10 @@
   font-weight: bold;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .apresentation {
   height: calc(100vh - 86px);
   background: -webkit-gradient(linear, left top, left bottom, from(#34363fce), to(#34363fcb)), url(../img/samsung1.jpg) no-repeat center/100%;
@@ -772,10 +776,10 @@ footer .container .footer-bottom a:hover {
 
 @media screen and (max-width: 420px) {
   .depts .carousel-depts {
-    height: 60vh;
+    height: 70vh;
   }
   .depts .carousel-depts .carousel {
-    max-height: 90%;
+    max-height: 80%;
   }
   .depts .carousel-depts .carousel .carousel-item {
     -webkit-box-orient: vertical;

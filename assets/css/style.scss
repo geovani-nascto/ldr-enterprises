@@ -26,6 +26,10 @@ $color-details: #03f484;
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 @mixin container {
     display: flex;
     flex-direction: column;
@@ -690,10 +694,10 @@ footer{
 
     .depts{
         .carousel-depts{
-            height: 60vh;
+            height: 70vh;
     
             .carousel{
-                max-height: 90%;
+                max-height: 80%;
                 // flex-direction: column XXXXXX
     
                 .carousel-item{
