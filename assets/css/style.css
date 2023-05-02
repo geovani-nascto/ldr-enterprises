@@ -816,7 +816,7 @@ footer .container .footer-bottom a:hover {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 426px) {
   .apresentation .slogan h1 {
     font-size: 3em;
   }
