@@ -21,7 +21,9 @@ $color-details: #03f484;
 
 
 header{
+    position: absolute;
     z-index: 99999;
+    width: 100%;
 
     nav{
         background-color: $secondary-color;
