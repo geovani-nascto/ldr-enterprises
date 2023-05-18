@@ -38,7 +38,7 @@ html{
 }
 
 .apresentation{
-    height: calc(100vh - 86px);
+    height: 100vh;
     background: linear-gradient(#34363fce, #34363fcb), url(../img/samsung1.jpg) no-repeat center/100%;
     background-size: cover;
 
@@ -49,10 +49,6 @@ html{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // position: absolute;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
         text-align: center;
 
         h1{

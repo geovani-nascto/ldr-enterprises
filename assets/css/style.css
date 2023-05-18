@@ -23,7 +23,7 @@ html {
 }
 
 .apresentation {
-  height: calc(100vh - 86px);
+  height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#34363fce), to(#34363fcb)), url(../img/samsung1.jpg) no-repeat center/100%;
   background: linear-gradient(#34363fce, #34363fcb), url(../img/samsung1.jpg) no-repeat center/100%;
   background-size: cover;
